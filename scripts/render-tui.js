@@ -22,7 +22,7 @@ const logo = args.includes('--logo') ? args[args.indexOf('--logo') + 1] : null;
   }
   const esc = lines.join('\n').replace(/&/g, '&amp;').replace(/</g, '&lt;');
   const html = `<body style="margin:0;background:#0d1117"><div id="w" style="position:relative;display:inline-block;padding:20px 24px">
-  <pre id="p" style="margin:0;font:15px/1.25 'DejaVu Sans Mono',monospace;color:#e6edf3">${esc}</pre></div></body>`;
+  <pre id="p" style="margin:0;font:15px/1.02 'DejaVu Sans Mono',monospace;color:#e6edf3">${esc}</pre></div></body>`;
   const b = await chromium.launch();
   const page = await b.newPage({ deviceScaleFactor: 2 });
   await page.setContent(html);
@@ -30,8 +30,8 @@ const logo = args.includes('--logo') ? args[args.indexOf('--logo') + 1] : null;
     const dataUrl = 'data:image/png;base64,' + fs.readFileSync(logo).toString('base64');
     await page.evaluate(({ box, dataUrl }) => {
       const p = document.getElementById('p');
-      const m = document.createElement('span'); m.textContent = 'MMMMMMMMMM'; m.style.cssText = 'position:absolute;visibility:hidden;font:15px/1.25 "DejaVu Sans Mono",monospace';
-      document.body.appendChild(m); const cw = m.getBoundingClientRect().width / 10; const ch = 15 * 1.25;
+      const m = document.createElement('span'); m.textContent = 'MMMMMMMMMM'; m.style.cssText = 'position:absolute;visibility:hidden;font:15px/1.02 "DejaVu Sans Mono",monospace';
+      document.body.appendChild(m); const cw = m.getBoundingClientRect().width / 10; const ch = 15 * 1.02;
       const img = document.createElement('img'); img.src = dataUrl;
       const h = box.rows * ch; img.style.cssText = `position:absolute;height:${h}px;width:${h}px;left:${24 + (box.col + box.len / 2) * cw - h / 2}px;top:${20 + box.row * ch}px`;
       p.parentElement.appendChild(img);
