@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pairnox: twin-pane file manager for desktop and terminal</title>
+<meta name="description" content="Pairnox is a fast twin-pane file manager for local and remote files. One core, a desktop window and a terminal interface, driven by the keyboard. Free, MIT licensed.">
+<meta name="theme-color" content="#1E88E5">
+<meta property="og:title" content="Pairnox">
+<meta property="og:description" content="A fast twin-pane file manager for desktop and terminal.">
+<meta property="og:image" content="assets/social-preview.png">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="assets/pairnox-logo-icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon-256.png">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.className+=' js';try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Pairnox home">
+      <img class="on-light" src="assets/pairnox-logo-wordmark-on-light.svg" alt="Pairnox">
+      <img class="on-dark" src="assets/pairnox-logo-wordmark-on-dark.svg" alt="" aria-hidden="true">
+    </a>
+    <nav aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#download">Download</a>
+      <a href="#docs">Docs</a>
+      <a href="#project">Project</a>
+      <button id="theme" type="button" hidden aria-label="Switch light or dark theme">Theme</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div id="top" class="hero">
+  <div class="wrap">
+    <img class="mark" src="assets/pairnox-logo-icon.svg" width="112" height="112" alt="">
+    <h1>Two panes. <span>Every file.</span></h1>
+    <p class="lead">Pairnox is a fast twin-pane file manager for your desktop and your terminal. Local folders, servers and archives, all driven from the keyboard.</p>
+    <div class="btns">
+      <a class="btn primary" href="#download">Download</a>
+      <a class="btn ghost" href="https://github.com/dbuffoni/Pairnox">View on GitHub</a>
+    </div>
+  </div>
+</div>
+
+<section id="features" class="alt">
+  <div class="wrap">
+    <h2>What it does</h2>
+    <p class="sub">One core written in Rust, two front ends that behave the same way.</p>
+    <div class="grid">
+      <div class="card"><h3>Desktop and terminal</h3><p>A Qt window and a terminal interface from the same core, with the same commands and keys.</p></div>
+      <div class="card"><h3>Keyboard first</h3><p>No toolbars. F9 finds any command, F1 shows the shortcuts, and every key can be changed.</p></div>
+      <div class="card"><h3>Local, remote, archives</h3><p>Folders, SFTP, SMB, WebDAV, S3 and archives (ZIP, 7-Zip, tar, RAR) with the same commands.</p></div>
+      <div class="card"><h3>Built-in viewer</h3><p>Text, hex, Markdown, Word, spreadsheets, slides, PDF, 3D models and pictures, also as a quick view.</p></div>
+      <div class="card"><h3>Reliable transfers</h3><p>A background queue with verification, bandwidth limits and resume after a crash.</p></div>
+      <div class="card"><h3>Multi-rename</h3><p>Templates with a live preview of the new names, or rules written by Claude.</p></div>
+      <div class="card"><h3>Remote agent</h3><p>A small static agent for Linux servers, over SSH or mutual TLS, for fast remote work and server-to-server copies.</p></div>
+      <div class="card"><h3>Plugins and scripts</h3><p>TypeScript in a sandbox, tested with <code>pnxr test</code>, optionally written with Claude.</p></div>
+      <div class="card"><h3>The <code>pnxr</code> command line</h3><p>Everything the windows do is also available from scripts and shells.</p></div>
+    </div>
+    <p>Each feature is described in the <a href="https://github.com/dbuffoni/Pairnox/blob/main/docs/manual/README.md">manual</a>.</p>
+  </div>
+</section>
+
+<section id="screenshots">
+  <div class="wrap">
+    <h2>Screenshots</h2>
+    <p class="sub">The same tool in both forms. Click an image to enlarge it.</p>
+    <h3 class="kind">Desktop window</h3>
+    <div class="shots">
+      <figure>
+        <a href="#img-gui-settings"><img src="assets/img/gui-settings.png" width="1280" height="773" loading="lazy" alt="The Pairnox window with two panels and the Settings dialog open, showing general, panel and transfer options."></a>
+        <figcaption>The window with the Settings dialog: panels, transfers, viewer and shortcuts.</figcaption>
+      </figure>
+    </div>
+    <h3 class="kind">Terminal interface</h3>
+    <div class="shots">
+      <figure>
+        <a href="#img-tui-commands"><img src="assets/img/tui-commands.png" width="1042" height="640" loading="lazy" alt="Pairnox in a terminal with the Commands list open: every command with its shortcut and function key."></a>
+        <figcaption>The command list (F9) with shortcuts and function keys, in a terminal.</figcaption>
+      </figure>
+      <figure>
+        <a href="#img-tui-help"><img src="assets/img/tui-help.png" width="1042" height="640" loading="lazy" alt="Pairnox in a terminal with the main shortcuts help open, grouped by files, select, navigate, view and tools."></a>
+        <figcaption>The shortcut help (F1), grouped by task.</figcaption>
+      </figure>
+      <figure>
+        <a href="#img-tui-settings"><img src="assets/img/tui-settings.png" width="1042" height="640" loading="lazy" alt="Pairnox in a terminal with the transfer settings open."></a>
+        <figcaption>Settings in the terminal: the same options as in the window.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="download" class="alt">
+  <div class="wrap">
+    <h2>Download</h2>
+    <p class="sub">Always the latest release, straight from GitHub Releases.</p>
+    <noscript><p>Open the <a href="https://github.com/dbuffoni/Pairnox/releases/latest">latest release</a> to pick the file for your system.</p></noscript>
+    <div id="dl-main" class="dl-main">
+      <h3 id="dl-title">Latest release</h3>
+      <p id="dl-sub">Choose the file for your system on the <a href="https://github.com/dbuffoni/Pairnox/releases/latest">releases page</a>.</p>
+      <p><a id="dl-btn" class="btn primary" href="https://github.com/dbuffoni/Pairnox/releases/latest">Open the latest release</a></p>
+      <p id="dl-meta" class="dl-meta"></p>
+    </div>
+    <div id="dl-all" class="js-only">
+      <table class="dl">
+        <caption class="js-only" style="text-align:left;font-weight:600;padding-bottom:6px">All downloads</caption>
+        <thead><tr><th>System</th><th>File</th><th>Size</th><th>SHA-256</th></tr></thead>
+        <tbody id="dl-rows"></tbody>
+      </table>
+    </div>
+    <div class="notes">
+      <h3 class="kind">Install notes</h3>
+      <details><summary>Linux</summary><p>Make the AppImage executable (<code>chmod +x Pairnox*.AppImage</code>) and run it. It contains the window and <code>pnxr</code>. Releases so far are for x86_64; the static <code>pnxr-agent</code> is also built for aarch64.</p></details>
+      <details><summary>Windows</summary><p>Installer and portable zip are planned. The app is not signed yet, so Windows SmartScreen may warn: choose "More info" then "Run anyway".</p></details>
+      <details><summary>macOS</summary><p>A dmg for Apple Silicon and Intel is planned. The app is not signed yet: right-click it, choose Open, and confirm.</p></details>
+      <details><summary>Build from source</summary><p>Any system with Rust and a C compiler can build the terminal interface; the window needs Qt 6.4 or later.</p>
+<pre>git clone https://github.com/dbuffoni/Pairnox
+cd Pairnox
+cargo build --release</pre></details>
+    </div>
+  </div>
+</section>
+
+<section id="docs">
+  <div class="wrap">
+    <h2>Documentation</h2>
+    <ul class="links">
+      <li><a href="https://github.com/dbuffoni/Pairnox/blob/main/docs/manual/README.md">User manual</a></li>
+      <li><a href="https://github.com/dbuffoni/Pairnox/blob/main/docs/scripting.md">Scripting and plugin guide</a></li>
+      <li><a href="https://github.com/dbuffoni/Pairnox/blob/main/CHANGELOG.md">Changelog</a></li>
+      <li><a href="https://github.com/dbuffoni/Pairnox/tree/main/docs/adr">Design decisions (ADR index)</a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="project" class="alt">
+  <div class="wrap">
+    <h2>Project</h2>
+    <ul class="links">
+      <li><a href="https://github.com/dbuffoni/Pairnox">Source code</a></li>
+      <li><a href="https://github.com/dbuffoni/Pairnox/issues">Report an issue</a></li>
+      <li><a href="https://github.com/dbuffoni/Pairnox/releases">All releases</a></li>
+      <li><a href="https://github.com/dbuffoni/Pairnox/blob/main/CONTRIBUTING.md">Contribute</a></li>
+      <li><a href="https://github.com/dbuffoni/Pairnox/blob/main/SECURITY.md">Security policy</a></li>
+    </ul>
+    <h3 class="kind">Licence</h3>
+    <p>Pairnox is free software under the <a href="https://github.com/dbuffoni/Pairnox/blob/main/LICENSE">MIT licence</a>, © 2026 Daniele Buffoni.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Pairnox <span id="ver"></span> · MIT licence · <a href="https://github.com/dbuffoni/Pairnox">GitHub</a> · <a href="https://github.com/dbuffoni/PairnoxWebSite">Source of this site</a></p>
+  </div>
+</footer>
+
+<div class="lightbox" id="img-gui-settings"><a class="close" href="#screenshots" aria-label="Close">×</a><img src="assets/img/gui-settings.png" alt="Pairnox window with the Settings dialog"></div>
+<div class="lightbox" id="img-tui-commands"><a class="close" href="#screenshots" aria-label="Close">×</a><img src="assets/img/tui-commands.png" alt="Pairnox terminal interface, Commands list"></div>
+<div class="lightbox" id="img-tui-help"><a class="close" href="#screenshots" aria-label="Close">×</a><img src="assets/img/tui-help.png" alt="Pairnox terminal interface, shortcut help"></div>
+<div class="lightbox" id="img-tui-settings"><a class="close" href="#screenshots" aria-label="Close">×</a><img src="assets/img/tui-settings.png" alt="Pairnox terminal interface, settings"></div>
+<script src="app.js"></script>
+</body>
+</html>
