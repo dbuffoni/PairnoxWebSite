@@ -18,10 +18,10 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
-  <div class="wrap">
+  <div class="wrap bar">
     <a class="brand" href="#top" aria-label="Pairnox home">
-      <img class="on-light" src="assets/pairnox-logo-wordmark-on-light.svg" alt="Pairnox">
-      <img class="on-dark" src="assets/pairnox-logo-wordmark-on-dark.svg" alt="" aria-hidden="true">
+      <img src="assets/pairnox-logo-icon.svg" width="34" height="34" alt="">
+      <span>Pair<b>nox</b></span>
     </a>
     <nav aria-label="Main">
       <a href="#features">Features</a>
@@ -29,21 +29,31 @@
       <a href="#download">Download</a>
       <a href="#docs">Docs</a>
       <a href="#project">Project</a>
-      <button id="theme" type="button" hidden aria-label="Switch light or dark theme">Theme</button>
     </nav>
+    <div class="tools"><a class="gh" href="https://github.com/dbuffoni/Pairnox">GitHub</a><button id="theme" type="button" hidden aria-label="Switch light or dark theme">◐</button></div>
   </div>
 </header>
 
 <main id="main">
 <div id="top" class="hero">
   <div class="wrap">
-    <img class="mark" src="assets/pairnox-logo-icon.svg" width="112" height="112" alt="">
-    <h1>Two panes. <span>Every file.</span></h1>
-    <p class="lead">Pairnox is a fast twin-pane file manager for your desktop and your terminal. Local folders, servers and archives, all driven from the keyboard.</p>
+    <h1>One file manager.<br><span>Two ways to use it.</span></h1>
+    <p class="lead">Pairnox is a fast twin-pane file manager. Use the desktop window or the terminal: same core, same commands, same keys, same settings.</p>
     <div class="btns">
       <a class="btn primary" href="#download">Download</a>
       <a class="btn ghost" href="https://github.com/dbuffoni/Pairnox">View on GitHub</a>
     </div>
+    <div class="dual" aria-label="Pairnox as a desktop window and in a terminal">
+      <figure class="win">
+        <div class="chrome"><i></i><i></i><i></i><span>Pairnox · desktop window</span></div>
+        <img src="assets/img/gui-panels.png" width="1280" height="800" alt="The Pairnox desktop window: two panels with folders and files, and the function-key bar at the bottom.">
+      </figure>
+      <figure class="win term">
+        <div class="chrome"><i></i><i></i><i></i><span>pnxr · terminal</span></div>
+        <img src="assets/img/tui-about.png" width="1042" height="640" alt="The About screen of Pairnox in a terminal, with the logo, version, licence and source address.">
+      </figure>
+    </div>
+    <p class="dual-cap">Left: the Qt window. Right: the terminal interface, showing the About screen.</p>
   </div>
 </div>
 
@@ -69,8 +79,8 @@
 <section id="screenshots">
   <div class="wrap">
     <h2>Screenshots</h2>
-    <p class="sub">The same tool in both forms. Click an image to enlarge it.</p>
-    <h3 class="kind">Desktop window</h3>
+    <p class="sub">Click an image to enlarge it.</p>
+    <h3 class="kind">More from the window</h3>
     <div class="shots">
       <figure>
         <a href="#img-gui-settings"><img src="assets/img/gui-settings.png" width="1280" height="773" loading="lazy" alt="The Pairnox window with two panels and the Settings dialog open, showing general, panel and transfer options."></a>
@@ -108,7 +118,6 @@
     </div>
     <div id="dl-all" class="js-only">
       <table class="dl">
-        <caption class="js-only" style="text-align:left;font-weight:600;padding-bottom:6px">All downloads</caption>
         <thead><tr><th>System</th><th>File</th><th>Size</th><th>SHA-256</th></tr></thead>
         <tbody id="dl-rows"></tbody>
       </table>
