@@ -12,7 +12,7 @@
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="icon" href="assets/pairnox-logo-icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/icon-256.png">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=3">
 <script>document.documentElement.className+=' js';try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 </head>
 <body>
@@ -30,30 +30,32 @@
       <a href="#docs">Docs</a>
       <a href="#project">Project</a>
     </nav>
-    <div class="tools"><a class="gh" href="https://github.com/dbuffoni/Pairnox">GitHub</a><button id="theme" type="button" hidden aria-label="Switch light or dark theme">◐</button></div>
+    <div class="tools"><a class="gh" href="https://github.com/dbuffoni/Pairnox">GitHub</a><button id="theme" type="button" hidden aria-label="Switch light or dark theme"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button></div>
   </div>
 </header>
 
 <main id="main">
 <div id="top" class="hero">
-  <div class="wrap">
+  <div class="wrap hero-text">
+    <p class="eyebrow">Free and open source · Linux, Windows, macOS</p>
     <h1>One file manager.<br><span>Two ways to use it.</span></h1>
     <p class="lead">Pairnox is a fast twin-pane file manager. Use the desktop window or the terminal: same core, same commands, same keys, same settings.</p>
     <div class="btns">
       <a class="btn primary" href="#download">Download</a>
       <a class="btn ghost" href="https://github.com/dbuffoni/Pairnox">View on GitHub</a>
     </div>
-    <div class="dual" aria-label="Pairnox as a desktop window and in a terminal">
-      <figure class="win">
-        <div class="chrome"><i></i><i></i><i></i><span>Pairnox · desktop window</span></div>
-        <img src="assets/img/gui-panels.png" width="1280" height="800" alt="The Pairnox desktop window: two panels with folders and files, and the function-key bar at the bottom.">
+  </div>
+  <div class="wrap wide">
+    <div class="dual">
+      <figure class="frame">
+        <div class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="label">Desktop window</span></div>
+        <div class="body"><img src="assets/img/gui-hero.png" width="1280" height="572" alt="The Pairnox desktop window: a folder list on the left and a rendered Markdown quick view on the right, with the function-key bar at the bottom."></div>
       </figure>
-      <figure class="win term">
-        <div class="chrome"><i></i><i></i><i></i><span>pnxr · terminal</span></div>
-        <img src="assets/img/tui-about.png" width="1042" height="640" alt="The About screen of Pairnox in a terminal, with the logo, version, licence and source address.">
+      <figure class="frame term">
+        <div class="bar"><span class="dots"><i></i><i></i><i></i></span><span class="label">Terminal · pnxr</span></div>
+        <div class="body"><img src="assets/img/tui-about.png" width="2084" height="1060" alt="The About screen of Pairnox in a terminal, with the logo, version, licence and source address."></div>
       </figure>
     </div>
-    <p class="dual-cap">Left: the Qt window. Right: the terminal interface, showing the About screen.</p>
   </div>
 </div>
 
@@ -173,6 +175,6 @@ cargo build --release</pre></details>
 <div class="lightbox" id="img-tui-commands"><a class="close" href="#screenshots" aria-label="Close">×</a><img src="assets/img/tui-commands.png" alt="Pairnox terminal interface, Commands list"></div>
 <div class="lightbox" id="img-tui-help"><a class="close" href="#screenshots" aria-label="Close">×</a><img src="assets/img/tui-help.png" alt="Pairnox terminal interface, shortcut help"></div>
 <div class="lightbox" id="img-tui-settings"><a class="close" href="#screenshots" aria-label="Close">×</a><img src="assets/img/tui-settings.png" alt="Pairnox terminal interface, settings"></div>
-<script src="app.js"></script>
+<script src="app.js?v=3"></script>
 </body>
 </html>

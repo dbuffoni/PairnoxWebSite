@@ -23,7 +23,7 @@ for f in root.glob("*.html"):
 for name, p in pages.items():
     for r in p.refs:
         if re.match(r"(https?:|mailto:|data:)", r): continue
-        path, _, frag = r.partition("#")
+        path, _, frag = r.partition("#"); path = path.split("?")[0]
         target = name if not path else path
         if path in ("", "./"): target = "index.html" if path else name
         if not (root / target).exists():
